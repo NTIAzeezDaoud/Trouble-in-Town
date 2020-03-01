@@ -52,8 +52,7 @@ namespace Trouble_in_Town.Player
             for (int i = 0; i < standaloneAmount; i++)
             {
                 RandomUnique(ref GameplayServer.Standalones, ref GameplayServer.Mafias, 1, GameplayServer.playerClients.Count, out number);
-                //GameplayServer.playerClients[number - 1].Role = RoleHelper.GetRole(RoleHelper.Standalone[new Random().Next(0, RoleHelper.Standalone.Length)]);
-                GameplayServer.playerClients[number - 1].Role = RoleHelper.GetRole(AvailableRoles.Paranoid);
+                GameplayServer.playerClients[number - 1].Role = RoleHelper.GetRole(RoleHelper.Standalone[new Random().Next(0, RoleHelper.Standalone.Length)]);
             }
             for (int i = 0; i < GameplayServer.playerClients.Count - MafiaAmount - standaloneAmount; i++)
             {

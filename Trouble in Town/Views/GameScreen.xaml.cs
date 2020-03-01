@@ -33,8 +33,7 @@ namespace Trouble_in_Town.Views
             RunningWindows.MainWindow.Title = $"{login.nameText.Text} - {login.addressText.Text}:{login.portText.Text}";
             try
             {
-                //client = new Client(login.addressText.Text, Convert.ToInt32(login.portText.Text), ClientName);
-                client = new Client("192.168.0.109", 13000, "Bob");
+                client = new Client(login.addressText.Text, Convert.ToInt32(login.portText.Text), ClientName);
             }
             catch (Exception)
             {
