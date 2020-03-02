@@ -64,7 +64,7 @@ namespace Trouble_in_Town.ServerClient
         {
             Phase = GamePhase.Night;
             timer.Elapsed -= GameStartEnded;
-            timer = new Timer(10000);
+            timer = new Timer(45000);
             timer.Elapsed += MorningStart;
             GameHelper.HandleNight();
             ((Views.ServerTerminal)RunningWindows.GetWindow("ServerTerminal")).Terminal("Night Started");
@@ -95,7 +95,7 @@ namespace Trouble_in_Town.ServerClient
         {
             Phase = GamePhase.Discussion;
             timer.Elapsed -= DiscussionStart;
-            timer = new Timer(10000);
+            timer = new Timer(90000);
             timer.Elapsed += VotingStart;
             GameHelper.HandleDiscussion();
             ((Views.ServerTerminal)RunningWindows.GetWindow("ServerTerminal")).Terminal("Discussion Started");
@@ -136,7 +136,7 @@ namespace Trouble_in_Town.ServerClient
         {
             Phase = GamePhase.Night;
             timer.Elapsed -= NightStart;
-            timer = new Timer(10000);
+            timer = new Timer(45000);
             timer.Elapsed += MorningStart;
             GameHelper.HandleNight();
             ((Views.ServerTerminal)RunningWindows.GetWindow("ServerTerminal")).Terminal("Night Started");
